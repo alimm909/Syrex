@@ -2,6 +2,8 @@ const ayarlar = require('../ayarlar.json');
 const db = require('quick.db');
 let talkedRecently = new Set();
 module.exports = async message => {
+if(message.author.bot) return
+
   if (talkedRecently.has(message.author.id)) {
     return;
   }
@@ -23,6 +25,12 @@ module.exports = async message => {
     cmd = client.commands.get(client.aliases.get(command));
   }
   if (cmd) {
+  let bakım = await db.fetch('bakım');
+  if(message.author.id !== ayarlar.sahip){
+  if(bakım){
+  return message.channel.send(`**<a:yukleniyor:660730237746806794> Sizlere En İyi Hizmeti Verebilmek İçin Bakımdayız.\n❓ Bakım Sebebi: \`${bakım}\`\n<a:onaylandi:660731474567495690> Lütfen Daha Sonra Tekrar Deneyin.**`)
+     }
+    }
     if (perms < cmd.conf.permLevel) return;
     cmd.run(client, message, params, perms);
   }
