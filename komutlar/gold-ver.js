@@ -1,23 +1,27 @@
-const db = require('quick.db')
 const Discord = require('discord.js')
+const db = require('quick.db')
+const ayarlar = require('../ayarlar.json')
 const client = new Discord.Client();
-exports.run = async (bot, message, args) => {
- 
-  let nesne = args[0]
-  if (!nesne) return message.channel.send('Bir kullanıcının IDsini girmelisin?')
+exports.run = async (client, message, args) => {
+    const krm = client.emojis.get("691623355647918082")
+    const dk = client.emojis.get("691622612358660139")
   
-  db.set(`gold_${nesne}`, 'gold')
-  
-  message.channel.send(`**${nesne}** IDli kullanıcı artık gold üye oldu!`)
+  let GoldPlayer = args[0]
+  if (!GoldPlayer) return message.channel.send(krm+ " Bir ID Girmelisin")
+ message.react('683327648436453517')
+  db.set(`Gold_${GoldPlayer}`, 'Gold')
+  message.channel.send(` **\`\`${GoldPlayer}\`\`** ID'sine Sahip <@${GoldPlayer}> Artık Gold Üye!`)
+ message.react('683327648436453517')
 }
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
-  permLevel: 4
+  aliases: ["gold-yap"],
+  permLevel: 4,
+kategori : 'sahip'
 };
 exports.help = {
-  name: 'goldyap',
-  description: '[Admin Komutu]',
-  usage: 'karaliste <ID>'
+  name: 'gold-ver',
+  description: 'Gold Üye He ? :D',
+  usage: 'gold-yap'
 };

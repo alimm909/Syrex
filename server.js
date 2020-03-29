@@ -788,30 +788,34 @@ client.on("message", async message => {
 
 ////////////////// gold üye  //////////////////////////
 
-client.on("message", async msg => {
-let timeout = 60000
-let dakdest = await db.fetch(`goldzzz_${msg.author.id}`);
-let i = db.fetch(`gold_${msg.author.id}`)
-          if (i == 'gold') {
-    if (dakdest !== null && timeout - (Date.now() - dakdest) > 0) {
-        let time = ms(timeout - (Date.now() - dakdest));
+client.on("message", async message => {
+  let Gold = client.emojis.get("683327833375768616");
+  let TimeOut = 100000;
+  let LastSee = await db.fetch(`GoldS_${message.author.id}`);
+  let R = await db.fetch(`Gold_${message.author.id}`);
+  if (R == "Gold") {
+    if (LastSee !== null && TimeOut - (Date.now() - LastSee) > 0) {
+      let Time = ms(TimeOut - (Date.now() - LastSee));
     } else {
-  if(msg.author.bot) return;   
-  if (msg.content.length > 1) {
-db.set(`goldzzz_${msg.author.id}`, Date.now());
-    const gold = new Discord.RichEmbed()
-    .setAuthor(client.user.username + " || Gold Üye")
-    .setThumbnail(msg.author.avatarURL)
-    .addField("**Açılın Gold Üye Geldi**", msg.author.username)
-    .setTimestamp()
-   msg.channel.send(gold).then(msg => msg.delete(3000))
+      if (message.author.bot) return;
+      if (message.content.length > 1) {
+        db.set(`GoldS_${message.author.id}`, Date.now());
+        const RevengeNYKS = new Discord.RichEmbed()
+          .setAuthor(message.author.tag, message.author.avatarURL)
+          .setDescription(
+              " Bir Gold Üye Belirdi Açın Yolu! <@" +
+              message.author.id +
+              ">"
+          )
+          .setColor("RANDOM");
+        message.channel
+          .send(RevengeNYKS)
+          .then(message => message.delete(15000));
+      }
+    }
+  } else if (R == undefined) {
   }
-};
-          }
-   else if (i == undefined) {           
-          }
-          if (!i) return;
-        
+  if (!R) return;
 });
 
 /////////////////////// Gold Üye /////////////////////////
