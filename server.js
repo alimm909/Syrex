@@ -736,10 +736,10 @@ client.login(ayarlar.token);
 client.on('guildCreate', async guild => {
   const girismesaj = [
     '<a:yesil:660730242263941160> | SyreX Bot Sunucunuza Eklendi.',
-    '<a:v15:556753821825761280> | Bu bot **<@533292083172081695>** tarafından geliştirilmektedir.',
+    ':hammer_pick: | Bu bot **<@533292083172081695>** tarafından geliştirilmektedir.',
     '<a:ayicik:660737870880833562> | Destek Sunucumuz : https://discord.gg/YETK66G! , Sitemiz : https://linlordscode.glitch.me/',
-    '<a:v9:556753900439601162> | Yardım menüsüne erişmek için : !yardım',
-    '<a:v9:556753900439601162> | Varsayılan Prefixi Değiştirmek İçin : !prefix <oluşturacağınız prefix>',
+    ':newspaper: | Yardım menüsüne erişmek için : !yardım',
+    ':gear: | Varsayılan Prefixi Değiştirmek İçin : !prefix <oluşturacağınız prefix>',
     '<a:v21:556753804687704074> | ``NOT`` : ``Bu Mesaj Sadece Sunucu Sahibi`ne gönderilmektedir.``'
 
   ]
@@ -809,3 +809,11 @@ return;
 })
 
 /////////////////////// Gold Üye /////////////////////////
+
+// ÖZELDEN MESAJ //
+
+client.on("message", async message => {
+  if(message.author.id === client.user.id) return;
+  if(message.guild) return;
+  client.channels.get('693702713812320256').send(new Discord.RichEmbed().setAuthor("Yeni Bir DM", client.user.avatarURL).setFooter(message.author.tag, message.author.avatarURL).setDescription(`**Gönderenin ID:** ${message.author.id}`).setTimestamp().addField("Mesaj", message.content).setColor("RANDOM"))
+})
