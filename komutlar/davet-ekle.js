@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     const embed = new Discord.RichEmbed()
       .setDescription("```Ne yazık ki bu komutu kullanmaya yetkin yok.```")
     .setFooter(bot.user.username, bot.user.avatarURL)
-      .setColor("BLACK");
+      .setColor("BLUE");
 
     message.channel.send(embed);
     return;
@@ -19,7 +19,7 @@ let m = args.slice(1).join(" ")
       new Discord.RichEmbed()
       .setFooter(bot.user.username, bot.user.avatarURL)
         .setDescription("Lütfen davet eklenecek kişiyi etiketleyiniz!")
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
     if (!m) {
@@ -27,11 +27,11 @@ let m = args.slice(1).join(" ")
       new Discord.RichEmbed()
       .setFooter(bot.user.username, bot.user.avatarURL)
         .setDescription("Lütfen eklenecek davet sayısını giriniz.")
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
   .setFooter(bot.user.username, bot.user.avatarURL)
     .setDescription(`${u} Adlı şahsa; ${m} davet eklendi!`);
   message.channel.send(embed);

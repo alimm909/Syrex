@@ -5,7 +5,7 @@ module.exports.run = async (client, message) => {
     let botlar = message.guild.members.filter(m => m.user.bot).size;
     let kullanıcılar = üyesayi - botlar;
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .addField(`Toplam Kişi`, üyesayi, true)
   .addField(`Toplam Kullanıcı`, kullanıcılar, true)
   .addField(`Botlar`, botlar, true)

@@ -20,7 +20,7 @@ exports.run = async (bot, message, args) => {
   if (!time) {
     const embedyazı = new Discord.RichEmbed()
 //0x36393E
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(
         `Örnek:${prefix}kanal-kilit <Süre>\nNot: yazdığınız kanalda bu işlemi yapar!`
       )
@@ -37,7 +37,7 @@ exports.run = async (bot, message, args) => {
       .then(() => {
         const embedyazı = new Discord.RichEmbed()
 
-          .setColor("BLACK")
+          .setColor("BLUE")
           .setDescription(`Kanal kilidi açıldı!`)
           .setTimestamp()
         .setFooter(bot.user.username, bot.user.avatarURL)
@@ -58,7 +58,7 @@ exports.run = async (bot, message, args) => {
       .then(() => {
         const embedyazı = new Discord.RichEmbed()
 
-          .setColor("BLACK")
+          .setColor("BLUE")
           .setDescription(
             `Başarıyla olduğunuz kanal kitlendi!\nKilitin açılmasına: ${ms(
               ms(time),
@@ -79,7 +79,7 @@ exports.run = async (bot, message, args) => {
 
               const embedyazı = new Discord.RichEmbed()
 
-                .setColor("#ff3600")
+                .setColor("BLUE")
                 .setDescription(`Başarıyla kanalın kilidi açıldı!`)
                 .setTimestamp()
               .setFooter(bot.user.username, bot.user.avatarURL)

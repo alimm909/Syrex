@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message) => {
   
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .addField(`Botu Sunucunuza Davet Edin !`, `[Tıkla](https://discordapp.com/api/oauth2/authorize?client_id=693700087012130877&permissions=8&scope=bot)`)
 .setFooter(client.user.username, client.user.avatarURL)
 

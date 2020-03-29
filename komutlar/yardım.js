@@ -28,7 +28,7 @@ exports.run = async (bot, message, args, tools) => {
       `\`rol-koruma\`, \`rol-koruma-sıfırla\`, \`kanal-koruma\`, \`kanal-koruma-sıfırla\``
     )
 
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setFooter(bot.user.username, bot.user.avatarURL);
   message.channel.send(embed);
 };

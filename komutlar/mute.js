@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   );
   if (!tomute) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`Lütfen susturulacak kişiyi etiketleyiniz!`)
       .setFooter(bot.user.username, bot.user.avatarURL);
 
@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
   }
   if (tomute.hasPermission("MANAGE_MESSAGES")) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`Ne yazık ki yetkilileri susturamam!`)
       .setFooter(bot.user.username, bot.user.avatarURL);
 
@@ -57,7 +57,7 @@ module.exports.run = async (bot, message, args) => {
     .replace(`gün`, `d`);
   if (!mutetime) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`Lütfen bir süre belirtiniz!`)
       .setFooter(bot.user.username, bot.user.avatarURL);
 
@@ -67,7 +67,7 @@ module.exports.run = async (bot, message, args) => {
 
   await tomute.addRole(muterole.id);
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`<@${tomute.id}> ${ms(ms(mutetime))} kadar susturuldu!`)
     .setFooter(bot.user.username, bot.user.avatarURL);
 
@@ -76,7 +76,7 @@ module.exports.run = async (bot, message, args) => {
   setTimeout(function() {
     tomute.removeRole(muterole.id);
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`<@${tomute.id}> adlı şahsın susturulma süresi doldu!`)
       .setFooter(bot.user.username, bot.user.avatarURL);
 

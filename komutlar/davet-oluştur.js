@@ -7,7 +7,7 @@ exports.run = async (bot, message, args) => {
       maxUses: args.uses
     });
       const sunucubilgi = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setTimestamp()
         .setDescription(`Davet kodu oluşturuldu! (https://discord.gg/${invite.code})`)
       .setFooter(bot.user.username, bot.user.avatarURL)

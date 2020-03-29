@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
   if(message.author.id !== ayarlar.sahip) {
      const embed = new Discord.RichEmbed()
     .setDescription(`**:x: Bu Komut Yapımcıma Özeldir !**`)
-    .setColor('RED')
+    .setColor('BLUE')
     return message.channel.send(embed).then(msg=>msg.delete(3000));
     }
 if(args[0] === "aç"){

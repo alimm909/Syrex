@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message) => {
   
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .addField(`Destek Sunucumuza Katılın!`, `[Tıkla](https://discord.gg/YETK66G)`)
 .setFooter(client.user.username, client.user.avatarURL)
 

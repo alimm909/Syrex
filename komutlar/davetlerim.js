@@ -24,7 +24,7 @@ exports.run = async (client, message, args, tools) => {
     const embed = new Discord.RichEmbed()
       .addField(`Davetlerin Sahibi`, `<@` + kişi.id + `>`, true)
       .addField(`Total Davet:`, sayı2, true)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
     message.channel.send(embed);
   }
@@ -32,7 +32,7 @@ exports.run = async (client, message, args, tools) => {
     const embed = new Discord.RichEmbed()
       .addField(`Davetlerin Sahibi`, `<@` + kişi.id + `>`, true)
       .addField(`Total Davet:`, sayı2, true)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
     message.channel.send(embed);
     return;
@@ -41,7 +41,7 @@ exports.run = async (client, message, args, tools) => {
     const embed = new Discord.RichEmbed()
       .addField(`Davetlerin Sahibi`, `<@` + kişi.id + `>`, true)
       .addField(`Total Davet:`, sayı2, true)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(
         `${message.guild.roles.get(veri).name} rolü için son ${-sayı2 -
           -veri12} davet!`
@@ -54,7 +54,7 @@ exports.run = async (client, message, args, tools) => {
       const embed = new Discord.RichEmbed()
         .addField(`Davetlerin Sahibi`, `<@` + kişi.id + `>`, true)
         .addField(`Total Davet:`, sayı2, true)
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(client.user.username, client.user.avatarURL);
       message.channel.send(embed);
       return;
@@ -63,7 +63,7 @@ exports.run = async (client, message, args, tools) => {
       const embed = new Discord.RichEmbed()
         .addField(`Davetlerin Sahibi`, `<@` + kişi.id + `>`, true)
         .addField(`Total Davet:`, sayı2, true)
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setDescription(
           `${message.guild.roles.get(veri2).name} rolü için son ${-sayı2 -
             -veri21} davet!`

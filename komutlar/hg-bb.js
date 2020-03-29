@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("BAN_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK");
+      .setColor("BLUE");
 
     message.channel.send(embed);
     return;
@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
 
   if (!args[0]) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setTitle("Hg-Bb sistemi!")
       .setDescription(`Hatalı kullanım! örnek: ${prefix}hg-bb aç && kapat`);
 
@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
   if (args[0] == "aç") {
     if (küfürg) {
       const embed = new Discord.RichEmbed()
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setTitle("Hg-Bb sistemi!")
         .setDescription("Görünüşe göre hg-bb zaten aktif!");
 
@@ -34,7 +34,7 @@ exports.run = async (client, message, args) => {
     } else {
       db.set(`dm_${message.guild.id}`, "acik");
       const embed = new Discord.RichEmbed()
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setTitle("Hg-Bb sistemi!")
         .setDescription("hg-bb başarıyla açıldı!");
 
@@ -43,7 +43,7 @@ exports.run = async (client, message, args) => {
   } else if (args[0] == "kapat") {
     db.delete(`dm_${message.guild.id}`);
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setTitle("Hg-Bb sistemi!")
       .setDescription("hg-bb başarıyla kapandı!");
 
