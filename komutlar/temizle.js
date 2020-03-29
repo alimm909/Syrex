@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 exports.run = function(client, message, args) {
   if (!message.member.hasPermission("MANAGE_MESSAGES")) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`Ne yazıkki bu komutu kullanmaya yetkiniz yok!`)
       .setFooter(client.user.username, client.user.avatarURL);
 
@@ -11,7 +11,7 @@ exports.run = function(client, message, args) {
   }
   if (!args[0]) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`Lütfen silinecek mesaj sayısını belirtiniz.`)
       .setFooter(client.user.username, client.user.avatarURL);
 
@@ -20,7 +20,7 @@ exports.run = function(client, message, args) {
   }
   if (args[0] > 100) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`Ne yazık ki 100'den fazla mesaj silemem.`)
       .setFooter(client.user.username, client.user.avatarURL);
 
@@ -29,7 +29,7 @@ exports.run = function(client, message, args) {
   }
   message.channel.bulkDelete(args[0]).then(() => {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .addField(`Temizleyen Yetkili`, `<@${message.author.id}>`)
       .addField(`Silinen Mesaj Sayısı`, args[0])
       .setFooter(client.user.username, client.user.avatarURL);

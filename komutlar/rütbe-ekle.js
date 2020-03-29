@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
   if (veri2) {
     const embed = new Discord.RichEmbed()
       .setDescription(`En Fazla "2" Tane Rütbe Ekleyebilirsiniz.`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);
@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
         .setDescription(
           `Lütfen bir rol etiketleyiniz!\nÖrnek: ${prefix}rütbe-ekle @Qral 5`
         )
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(client.user.username, client.user.avatarURL);
 
       message.channel.send(embed);
@@ -34,7 +34,7 @@ exports.run = async (client, message, args) => {
         .setDescription(
           `Lütfen bir davet sayısı belirtiniz!\nÖrnek: ${prefix}rütbe-ekle @Qral 5`
         )
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(client.user.username, client.user.avatarURL);
 
       message.channel.send(embed);
@@ -44,7 +44,7 @@ exports.run = async (client, message, args) => {
       .setDescription(
         `Başarılı bir şekilde ${sine} rolü ${enis} davet karşılığında elde edilebilecek!`
       )
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);
@@ -61,7 +61,7 @@ exports.run = async (client, message, args) => {
         .setDescription(
           `Lütfen bir rol etiketleyiniz!\nÖrnek: ${prefix}rütbe-ekle @Qral 5`
         )
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(client.user.username, client.user.avatarURL);
 
       message.channel.send(embed);
@@ -72,7 +72,7 @@ exports.run = async (client, message, args) => {
         .setDescription(
           `Lütfen bir davet sayısı belirtiniz!\nÖrnek: ${prefix}rütbe-ekle @Qral 5`
         )
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(client.user.username, client.user.avatarURL);
 
       message.channel.send(embed);
@@ -82,7 +82,7 @@ exports.run = async (client, message, args) => {
       .setDescription(
         `Başarılı bir şekilde ${sine} rolü ${enis} davet karşılığında elde edilebilecek!`
       )
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);

@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(bot.user.username, bot.user.avatarURL)
 
     message.channel.send(embed);
@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
   if (!kontrol) {
     const embed = new Discord.RichEmbed()
         .setDescription(`Sayaç zaten ayarlanmamış!`)
-        .setColor("BLACK")
+        .setColor("BLUE")
       .setFooter(bot.user.username, bot.user.avatarURL)
      message.channel.send(embed);
     return
@@ -26,7 +26,7 @@ else{
   message.channel.send(
     new Discord.RichEmbed()
       .setDescription(`Sayaç başarıyla sıfırlandı!`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(bot.user.username, bot.user.avatarURL)
   );
   db.delete(`sayaçhedef_${message.guild.id}`);

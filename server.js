@@ -154,7 +154,7 @@ client.on("channelDelete", async channel => {
   const embed = new Discord.RichEmbed()
     .setTitle(`Bir kanal silindi!`)
     .addField(`Silen`, entry.executor.tag)
-    .setColor("#ff3600")
+    .setColor("BLUE")
     .addField(`Silinen Kanal`, channel.name);
   client.channels.get(kanal).send(embed);
 });
@@ -170,7 +170,7 @@ client.on("channelCreate", async channel => {
   channel.delete();
   const embed = new Discord.RichEmbed()
     .setTitle(`Bir kanal açıldı!`)
-    .setColor("#ff3600")
+    .setColor("BLUE")
     .addField(`Açan`, entry.executor.tag)
     .addField(`Açılan Kanal`, channel.name);
   client.channels.get(kanal).send(embed);
@@ -226,7 +226,7 @@ client.on("message", async message => {
     let i = await db.fetch(`saas_${message.guild.id}`);
     if (i === "acik") {
       const embed = new Discord.RichEmbed()
-        .setColor("#ff3600")
+        .setColor("BLUE")
         .setTitle("Sa-As sistemi!")
         .setDescription(
           "**Aleyküm Selam, Hoşgeldin! ^-^**"
@@ -242,7 +242,7 @@ client.on("guildMemberAdd", async member => {
   db.fetch(`dm_${member.guild.id}`).then(i => {
     if (i == "acik") {
       const msj = new Discord.RichEmbed()
-        .setColor("#ff3600")
+        .setColor("BLUE")
         .setDescription(
           `<@${member.user.id}> sunucuya hoşgeldin!\nBu sunucu **<@${client.user.id}>** kullanıyor!\nKomutlarımı görmek için: !yardım\nEğer beni eklemek istersen: [[Tıkla!]](https://discordapp.com/api/oauth2/authorize?client_id=693700087012130877&permissions=8&scope=bot)`
         )
@@ -259,7 +259,7 @@ client.on("guildMemberRemove", async member => {
   db.fetch(`dm_${member.guild.id}`).then(i => {
     if (i == "acik") {
       let msj = new Discord.RichEmbed()
-        .setColor("#ff3600")
+        .setColor("BLUE")
         .setDescription(
           `<@${member.user.id}> Güle güle, özleneceksin!\nEğer beni eklemek istersen: [[Tıkla!]](https://discordapp.com/api/oauth2/authorize?client_id=693700087012130877&permissions=8&scope=bot)`
         )
@@ -306,7 +306,7 @@ client.on("message", async message => {
         db.add(`reklamuyari_${message.author.id}`, 1); //uyarı puanı ekleme
         if (uyarisayisi === null) {
           let uyari = new Discord.RichEmbed()
-            .setColor("#ff3600")
+            .setColor("BLUE")
             .setTitle("Reklam-Engel!")
             .setDescription(
               `<@${message.author.id}> reklam yapmayı kes! bu ilk uyarın! (1/3)`
@@ -317,7 +317,7 @@ client.on("message", async message => {
         }
         if (uyarisayisi === 1) {
           let uyari = new Discord.RichEmbed()
-            .setColor("#ff3600")
+            .setColor("BLUE")
             .setTitle("Reklam-Engel!")
             .setDescription(
               `<@${message.author.id}> reklam yapmayı kes! bu ikinci uyarın! (2/3)`
@@ -332,7 +332,7 @@ client.on("message", async message => {
             reason: `Reklam-Engel sistemi!`
           });
           let uyari = new Discord.RichEmbed()
-            .setColor("#ff3600")
+            .setColor("BLUE")
             .setTitle("Reklam-Engel!")
             .setDescription(
               `<@${message.author.id}> üç kere reklam yaptığı için sunucudan atıldı!`
@@ -348,7 +348,7 @@ client.on("message", async message => {
           });
           db.delete(`reklamuyari_${message.author.id}`);
           let uyari = new Discord.RichEmbed()
-            .setColor("#ff3600")
+            .setColor("BLUE")
             .setTitle("Reklam kick sistemi")
             .setDescription(
               `<@${message.author.id}> atıldıktan sonra tekrar reklam yaptığı için sunucudan yasaklandı!`
@@ -391,7 +391,7 @@ client.on("guildMemberRemove", async member => {
 
   if (!d) {
     const aa = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(
         `\`\`${member.user.tag}\`\` **adlı şahıs aramızdan ayrıldı.\nŞahsı davet eden:** \`\`Bulunamadı!\`\``
       )
@@ -400,7 +400,7 @@ client.on("guildMemberRemove", async member => {
     return;
   } else {
     const aa = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(
         `\`\`${member.user.tag}\`\` **adlı şahıs aramızdan ayrıldı.\nŞahsı davet eden:** \`\`${sa.tag}\`\``
       )
@@ -453,7 +453,7 @@ client.on("guildMemberAdd", async member => {
     }
 
     const aa = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(
         `\`\`${member.user.tag}\`\` **adlı şahıs sunucuya katıldı.\nŞahsı davet eden:** \`\`${davetçi.tag}\`\`\n**Toplam \`\`${sayı2}\`\` daveti oldu!**`
       )
@@ -486,7 +486,7 @@ client.on("guildMemberAdd", async member => {
   member.addRole(rol);
   if (!msj) {
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(
         `- :loudspeaker: **@${member.user.tag}** adlı şahsa rolü verildi! :inbox_tray:`
       )
@@ -500,7 +500,7 @@ client.on("guildMemberAdd", async member => {
       .replace(`-uyetag-`, `<@${member.user.id}>`)
       .replace(`-rol-`, `${member.guild.roles.get(rol).name}`);
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(msj2)
       .setFooter(client.user.username, client.user.avatarURL);
     client.channels.get(kanal).send(embed);
@@ -518,7 +518,7 @@ client.on("guildMemberAdd", async member => {
 
   if (rol == member.guild.memberCount) {
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(`Tebrikler! başarılı bir şekilde ${rol} kişi olduk!`)
       .setFooter(client.user.username, client.user.avatarURL);
     client.channels.get(kanal).send(embed);
@@ -530,7 +530,7 @@ client.on("guildMemberAdd", async member => {
   }
   if (rol < member.guild.memberCount) {
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(`Tebrikler! başarılı bir şekilde ${rol} kişi olduk!`)
       .setFooter(client.user.username, client.user.avatarURL);
     client.channels.get(kanal).send(embed);
@@ -542,7 +542,7 @@ client.on("guildMemberAdd", async member => {
   }
   if (!msj) {
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(
         `:loudspeaker: **@${
           member.user.tag
@@ -560,7 +560,7 @@ client.on("guildMemberAdd", async member => {
       .replace(`-hedef-`, `${rol}`)
       .replace(`-hedefkalan-`, `${rol - member.guild.memberCount}`);
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(msj2)
       .setFooter(client.user.username, client.user.avatarURL);
     client.channels.get(kanal).send(embed);
@@ -580,7 +580,7 @@ client.on("guildMemberAdd", async member => {
   if (!msj) {
     member.setNickname(`${rol} | ${member.user.username}`);
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(
         `:loudspeaker: **@${member.user.tag}** adlı şahsa tag verildi!`
       )
@@ -593,7 +593,7 @@ client.on("guildMemberAdd", async member => {
       .replace(`-tag-`, `${rol}`);
     member.setNickname(msj2);
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(
         `:loudspeaker: **@${member.user.tag}** adlı şahsa tag verildi!`
       )
@@ -613,7 +613,7 @@ client.on("message", async message => {
       db.add(`sayi_${message.author.id}`, 1);
       if (sayı == null) {
         const embed = new Discord.RichEmbed()
-          .setColor("#ff3600")
+          .setColor("BLUE")
           .setDescription(
             "Bu 1. uyarın! Lütfen tekrarlama! Aksi taktirde atılacaksın!\n(1/3)"
           )
@@ -624,7 +624,7 @@ client.on("message", async message => {
       }
       if (sayı === 1) {
         const embed = new Discord.RichEmbed()
-          .setColor("#ff3600")
+          .setColor("BLUE")
           .setDescription(
             "Bu 2. uyarın! Lütfen tekrarlama! Aksi taktirde atılacaksın!\n(2/3)"
           )
@@ -636,7 +636,7 @@ client.on("message", async message => {
       if (sayı > 2) {
         message.delete();
         const embed = new Discord.RichEmbed()
-          .setColor("#ff3600")
+          .setColor("BLUE")
           .setDescription("Sunucudan atılıyorsun!")
           .setFooter(client.user.username, client.user.avatarURL);
         message.channel.send(embed);
@@ -659,7 +659,7 @@ client.on("guildMemberRemove", async member => {
 
   if (!msj) {
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(
         `- :loudspeaker: **@${
           member.user.tag
@@ -677,7 +677,7 @@ client.on("guildMemberRemove", async member => {
       .replace(`-hedef-`, `${rol}`)
       .replace(`-hedefkalan-`, `${rol - member.guild.memberCount}`);
     const embed = new Discord.RichEmbed()
-      .setColor("#ff3600")
+      .setColor("BLUE")
       .setDescription(msj2)
       .setFooter(client.user.username, client.user.avatarURL);
     client.channels.get(kanal).send(embed);

@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message) => {
   
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .addField(`Sitemizi İnceleyin !`, `[Tıkla](https://linlordscode.glitch.me)`)
 .setFooter(client.user.username, client.user.avatarURL)
 

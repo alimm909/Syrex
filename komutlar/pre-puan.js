@@ -13,14 +13,14 @@ exports.run = async (client, message, args) => {
     const embed = new Discord.RichEmbed()
       .setTitle("Puanın!")
       .setDescription("Hiç puanın yok!")
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(kişi.username, kişi.avatarURL);
     message.channel.send(embed);
   } else {
     const embed = new Discord.RichEmbed()
       .setTitle("Puanın!")
       .setDescription(para + ` Puan!`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(kişi.username, kişi.avatarURL);
     message.channel.send(embed);
   }

@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => {
   if (!veri) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Zaten herhangi bir rütbe ayarlanmamış!`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);
@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
             message.guild.roles.get(veri).name
           }** - ${veri12} Davet!`
         )
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(client.user.username, client.user.avatarURL);
 
       message.channel.send(embed);
@@ -39,7 +39,7 @@ exports.run = async (client, message, args) => {
             message.guild.roles.get(veri2).name
           }** - ${veri21} Davet!`
         )
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(client.user.username, client.user.avatarURL);
 
       message.channel.send(embed);

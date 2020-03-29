@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
 let kanal = message.mentions.channels.first()
 if(!kanal){
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
   .setFooter(client.user.username, client.user.avatarURL)
   .setDescription(`Lütfen log kanalını etiketleyiniz!`)
   message.channel.send(embed)
@@ -14,7 +14,7 @@ if(!kanal){
 }
   db.set(`rolk_${message.guild.id}`, kanal.id)
   const embed = new Discord.RichEmbed()
-  .setColor("BLACK")
+  .setColor("BLUE")
   .setFooter(client.user.username, client.user.avatarURL)
   .setDescription(`Log kanalı; ${kanal} olarak ayarlandı!`)
   message.channel.send(embed)

@@ -12,7 +12,7 @@ exports.run = async (bot, message, args) => {
 
     const embed = new Discord.RichEmbed()
       .setTitle("Hata!")
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(
         `Günlük premium ödülünü zaten aldın!\nYeniden almana: **${timeObj.hours} saat ${timeObj.minutes} dakika**!`
       );
@@ -22,7 +22,7 @@ exports.run = async (bot, message, args) => {
     const embed = new Discord.RichEmbed()
       .setTitle("Günlük Pre Puanın!")
       .setDescription(`Günlük Premium Puanın: **${amount}** puan!`)
-      .setColor("BLACK");
+      .setColor("BLUE");
     message.channel.send(embed);
 
     db.set(`son_${message.author.id}`, Date.now());

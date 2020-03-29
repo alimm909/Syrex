@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
   try {
     if (!istek) {
       const e = new Discord.RichEmbed()
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setDescription(
           `Mevcut ürünler: Premium - 3.000 Puan!\n\nSatın alma: ${prefix}pre-market premium`
         );
@@ -24,7 +24,7 @@ exports.run = async (client, message, args) => {
       if (ppp == "acik") {
         const embed = new Discord.RichEmbed()
           .setDescription(`Zaten bu sunucu premium!`)
-          .setColor("BLACK")
+          .setColor("BLUE")
           .setTimestamp();
         message.channel.send({ embed });
       } else if (para < 3000) {

@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(bot.user.username, bot.user.avatarURL);
 
     message.channel.send(embed);
@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
           `Lütfen bir kullanıcı giriniz!\nÖrnek: ${prefix}rol-al <@Kullanıcı> <Rol>`
         )
         .setFooter(bot.user.username, bot.user.avatarURL)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   let role =
     message.mentions.roles.first() ||
@@ -34,13 +34,13 @@ module.exports.run = async (bot, message, args) => {
           `Lütfen bir rol belirtiniz!\nÖrnek: ${prefix}rol-al <@Kullanıcı> <Rol>`
         )
         .setFooter(bot.user.username, bot.user.avatarURL)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   if (!rMember.roles.has(role.id))
     return message.channel.sendEmbed(
       new Discord.RichEmbed()
         .setDescription("Kullanıcı zaten bu role sahip değil!")
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(bot.user.username, bot.user.avatarURL)
     );
   await rMember.removeRole(role.id);
@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
       .setDescription(
         `${rMember} adlı şahıstan \`${role.name}\` adlı rol alındı!`
       )
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(bot.user.username, bot.user.avatarURL)
   );
 };

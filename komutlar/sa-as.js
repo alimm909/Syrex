@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("BAN_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK");
+      .setColor("BLUE");
 
     message.channel.send(embed);
     return;
@@ -18,14 +18,14 @@ exports.run = async (client, message, args) => {
       new Discord.RichEmbed()
         .setTitle("Hatalı kullanım!")
         .setDescription(`${prefix}sa-as aç && kapat`)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   if (ee === "aç") {
     db.set(`saas_${message.guild.id}`, "acik");
     message.channel.send(
       new Discord.RichEmbed()
         .setTitle("İşlem Başarılı!")
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setDescription("Bundan sonra selam verildiğinde bot cevap verecek!")
     );
   } else if (ee === "kapat") {
@@ -33,7 +33,7 @@ exports.run = async (client, message, args) => {
     message.channel.send(
       new Discord.RichEmbed()
         .setTitle("İşlem Başarılı!")
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setDescription("Bundan sonra selam verildiğinde bot cevap vermeyecek!")
     );
   }

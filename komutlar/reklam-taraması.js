@@ -5,7 +5,7 @@ exports.run = (bot, message, args) => {
   
   if (!message.member.hasPermission("KICK_MEMBERS")) {const embed = new Discord.RichEmbed()
   .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
- .setColor("BLACK")
+ .setColor("BLUE")
    .setFooter(bot.user.username, bot.user.avatarURL)
   
 message.channel.send(embed)  
@@ -16,7 +16,7 @@ message.channel.send(embed)
     const embed = new Discord.RichEmbed()
         .addField('Oynuyorunda reklam olanlar', members.map(member => `${member} = ${member.user.presence.game.name}`).join("\n") || "Yok!")
         .addField('Kullanıcı adında reklam olanlar', memberss.map(member => `${member} = ${member.user.username}`).join("\n") || "Yok!")
-        .setColor("BLACK")
+        .setColor("BLUE")
              .setFooter(bot.user.username, bot.user.avatarURL)
     message.channel.send({embed})
 }

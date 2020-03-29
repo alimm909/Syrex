@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(bot.user.username, bot.user.avatarURL)
 
     message.channel.send(embed);
@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
 let seç = args[0]
 if(!seç){
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`Lütfen sıfırlanacak mesajı belirtiniz (hg veya bb)!`)
     .setFooter(bot.user.username, bot.user.avatarURL)
   message.channel.send(embed);
@@ -24,7 +24,7 @@ if(seç == "hg"){
   let msj = await db.fetch(`sayaçmsjhg_${message.guild.id}`)
   if(!msj){
       const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`Hoşgeldin Sayaç Mesajı zaten ayarlanmamış!`)
     .setFooter(bot.user.username, bot.user.avatarURL)
   message.channel.send(embed);
@@ -32,7 +32,7 @@ if(seç == "hg"){
   }
   db.delete(`sayaçmsjhg_${message.guild.id}`)
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`Hoşgeldin Sayaç Mesajı sıfırlandı!`)
     .setFooter(bot.user.username, bot.user.avatarURL)
   message.channel.send(embed);
@@ -42,7 +42,7 @@ if(seç == "hg"){
   let msj = await db.fetch(`sayaçmsjbb_${message.guild.id}`)
   if(!msj){
       const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`Görüşürüz Sayaç Mesajı zaten ayarlanmamış!`)
     .setFooter(bot.user.username, bot.user.avatarURL)
   message.channel.send(embed);
@@ -50,7 +50,7 @@ if(seç == "hg"){
   }
   db.delete(`sayaçmsjbb_${message.guild.id}`)
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`Görüşürüz Sayaç Mesajı sıfırlandı!`)
     .setFooter(bot.user.username, bot.user.avatarURL)
   message.channel.send(embed);

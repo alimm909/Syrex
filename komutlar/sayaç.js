@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK")
+      .setColor("BLUE")
     .setFooter(bot.user.username, bot.user.avatarURL)
 
     message.channel.send(embed);
@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
       new Discord.RichEmbed()
         .setDescription(`Lütfen bir hedef belirtiniz!`)
       .setFooter(bot.user.username, bot.user.avatarURL)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
   
@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
       new Discord.RichEmbed()
         .setDescription(`Bu hedefi zaten aşmışsınız!`)
           .setFooter(bot.user.username, bot.user.avatarURL)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
   if (!kanal) {
@@ -36,11 +36,11 @@ module.exports.run = async (bot, message, args) => {
       new Discord.RichEmbed()
         .setDescription(`Lütfen bir kanal belirtiniz!`)
       .setFooter(bot.user.username, bot.user.avatarURL)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(
       `Sayaç kanalı; ${kanal}\nHedefi; ${hedef} olarak ayarlandı!`
     )

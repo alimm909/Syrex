@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("BAN_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK")
+      .setColor("BLUE")
 .setFooter(bot.user.username, bot.user.avatarURL);
     message.channel.send(embed);
     return;
@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(
           `Lütfen bir kullanıcı giriniz!\nÖrnek: ${prefix}ad <@Kullanıcı> <YeniAd>`
         )
-        .setColor("BLACK")
+        .setColor("BLUE")
       .setFooter(bot.user.username, bot.user.avatarURL)
     );
   }
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
   rMember.setNickname(`${isim}`);
   
   const embed = new Discord.RichEmbed()
-  .setColor("BLACK")
+  .setColor("BLUE")
   .setDescription(`${rMember} adlı şahsın adı değiştirildi!`)
   .setFooter(bot.user.username, bot.user.avatarURL);
   message.channel.send(embed)

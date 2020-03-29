@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
   if (!rol) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Lütfen silinecek rütbenin rolünü etiketleyiniz!`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);
@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
           message.guild.roles.get(veri).name
         }** rolüne sahip rütbe silindi!`
       )
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);
@@ -44,7 +44,7 @@ exports.run = async (client, message, args) => {
           message.guild.roles.get(veri2).name
         }** rolüne sahip rütbe silindi!`
       )
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);
@@ -55,7 +55,7 @@ exports.run = async (client, message, args) => {
   } else {
     const embed = new Discord.RichEmbed()
       .setDescription(`Rütbeler arasında böyle bir rütbe bulamadım!`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);

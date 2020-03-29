@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("BAN_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setFooter(client.user.username, client.user.avatarURL);
 
     message.channel.send(embed);
@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
   if (!limit) {
     var embed = new Discord.RichEmbed()
       .setDescription(`Lütfen limiti giriniz. Örnek: ${prefix}slowmode 5`)
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setTimestamp()
       .setFooter(client.user.username, client.user.avatarURL);
     message.channel.send({ embed });
@@ -52,7 +52,7 @@ exports.run = async (client, message, args) => {
     {
       const embed = new Discord.RichEmbed()
         .setDescription(`Süre limiti sadece **Sayı** olabilir`)
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setFooter(client.user.username, client.user.avatarURL);
 
       message.channel.send(embed);
@@ -64,7 +64,7 @@ exports.run = async (client, message, args) => {
     return message.channel.sendEmbed(
       new Discord.RichEmbed()
         .setDescription("Süre limiti maksimum **20** saniye olabilir.")
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
   message.channel.sendEmbed(
@@ -73,7 +73,7 @@ exports.run = async (client, message, args) => {
         `Yazma süre limiti **${limit}** saniye olarak ayarlanmıştır.`
       )
       .setFooter(client.user.username, client.user.avatarURL)
-      .setColor("BLACK")
+      .setColor("BLUE")
   );
   var request = require("request");
   request({
