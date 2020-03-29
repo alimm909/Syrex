@@ -758,10 +758,10 @@ client.on("guildCreate", async guild => {
 
 client.on(`guildMemberAdd`, async member => {
   const e = new Discord.RichEmbed()
-    .setColor(`RANDOM`)
-    .setImage(`https://media.giphy.com/media/l3q2GDh3wQqVWSiGY/giphy.gif`)
-    .addField(`<a:sagok:660737869576667137> **Sunucumuza Hoşgeldin !**`, `<a:sagok:660737869576667137> Sunucuya Kayıt Olmak İçin İsim Ve Yaşını Kayıt Chatine Yaz !`)
-    .setFooter(`Bu Sunucuda Kendi Kayıt Botumuz Kullanılmaktadır.`)
+    .setColor(`BLUE`)
+    .setImage(`https://media.giphy.com/media/xUPGGDNsLvqsBOhuU0/giphy.gif`)
+    .addField(`<a:sagok:660737869576667137> **Sunucuya Hoşgeldin !**`, `<a:sagok:660737869576667137> Bu Sunucu "SyreX Bot" Kullanıyor !`)
+    .setFooter(`Botu Davet Etmek İçin : !davet | Sitemiz İçin : !site`)
   member.send(e);
 });
 

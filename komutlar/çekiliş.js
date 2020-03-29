@@ -26,7 +26,7 @@ var filter = m => m.author.id === message.author.id;
  
   
   
-      message.channel.send(`:eight_pointed_black_star:| **Çekilişin yapılacağı kanalın adını yaz**`).then(msg => {
+      message.channel.send(`:eight_pointed_black_star:| **Çekilişin yapılacağı kanalın adını başında # olmadan yaz, örnek çekiliş**`).then(msg => {
       message.channel.awaitMessages(filter, {
         max: 1,
         time: 20000,
@@ -57,9 +57,9 @@ var filter = m => m.author.id === message.author.id;
                 message.delete();
                 try {
                   let giveEmbed = new Discord.RichEmbed()
-                  .setColor("#f558c9")
+                  .setColor("BLUE")
                   .setDescription(`**Ödül: ${title}** \n🎉'a Basarak Katıl \nKalan Süre : ${duration} \n **Başlama Zamanı :** ${hours}:${minutes}:${seconds} ${suffix}`)
-                  .setFooter(message.author.username + " (SyreX çekiliş sistemi)", message.author.avatarURL);
+                  .setFooter(message.author.username + " (SyreX Çekiliş Sistemi)", message.author.avatarURL);
                   message.guild.channels.find("name" , room).send(' :heavy_check_mark: **ÇEKİLİŞ BAŞLADI** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
                      let re = m.react('🎉');
                      setTimeout(() => {
@@ -69,15 +69,15 @@ var filter = m => m.author.id === message.author.id;
                        let endEmbed = new Discord.RichEmbed()
                        .setAuthor(message.author.username, message.author.avatarURL)
                        .setTitle(title)
-                       .setColor("#f558c9")
-            .setFooter("(SyreX çekiliş sistemi)")
+                       .setColor("BLUE")
+            .setFooter("(SyreX Çekiliş Sistemi)")
                        .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter} \nBitiş zamanı :`)
                        .setTimestamp()
                      m.edit('** 🎉 ÇEKİLİŞ BİTTİ 🎉**' , {embed: endEmbed});
                        
                        var embedLel = new Discord.RichEmbed()
-                        .setColor("#f558c9")
-                        .setDescription("Ödülünü Moderatörleri Etiketleyerek Alabilirsin!").setFooter("(SyreX çekiliş sistemi)")
+                        .setColor("BLUE")
+                        .setDescription("Ödülünü Yetkililerden Alabilirsin!").setFooter("(SyreX Çekiliş Sistemi)")
                     message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` kazandın!**` , embedLel)
                 }, ms(duration));
             });
@@ -105,3 +105,4 @@ exports.help = {
   description: 'Çekiliş mi? Sunucunda güzel şeyler olacak :3',
   usage: 'çekiliş'
 };
+   
