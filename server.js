@@ -729,3 +729,25 @@ client.on("error", e => {
 });
 
 client.login(ayarlar.token);
+
+
+// BOT EKLENİNCE KURUCUYA MESAJ //
+
+client.on('guildCreate', async guild => {
+
+const chypercode = new Discord.RichEmbed()
+
+.setColor("BLUE")
+.addField(`Merhabalar Sahibi Olduğunuz ${guild.name}`, "Adlı Sunucuya Giriş Yaptım")
+.addField("Komutlarımı Görmek İçin", "!yardım")
+.addField("Sitemize Göz Atmak İçin", "!site")
+.addField("Bot/Sunucu/Üye Satın Almak İçin", "!satınal")
+.addField("Destek Sunucumuza Gelmek İçin", "!sunucu")
+.addField("Herhangi Bir Konuda Destek Almak İçin", "!canlıdestek")
+.setFooter("SyreX Bot [NOT : Bu Mesaj Sadece Sunucu Sahibine Gönderilmiştir.]") 
+.setTimestamp()
+.setThumbnail("https://media.giphy.com/media/3oEdva9BUHPIs2SkGk/giphy.gif")
+
+guild.owner.send(); 
+
+});
