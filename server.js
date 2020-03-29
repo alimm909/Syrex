@@ -751,3 +751,54 @@ const chypercode = new Discord.RichEmbed()
 guild.owner.send(); 
 
 });
+
+// BİRİ GELİNCE ÖZELDEN MESAJ //
+
+
+
+// BİRİ GELİNCE ÖZELDEN MESAJ //
+
+// AÇILIN KODLAYICIM GELDİ//
+
+// AÇILIN KODLAYICIM GELDİ //
+
+client.on("message", async message => {
+  const ms = require('parse-ms')
+   let dogrulama = await db.fetch(`sahiponay_${message.author.id}_${message.guild.id}`);
+    let gun = 1800000; // bir gün  değiştirmek için "zaman to ms" yazın google'a açılan yerdeki rakamı girin (boşluk olmadan) (örnek 1day to ms) (Şuanda 15 Dakikada Bir Yazar)
+    if (dogrulama !== null && gun - (Date.now() - dogrulama) > 0) {
+       
+    } else {
+          if(message.author.id === ayarlar.sahip){
+           db.set(`sahiponay_${message.author.id}_${message.guild.id}`, Date.now())
+            message.channel.send("<a:megafon:676472995199582256> **Hizaya Geçin, Kodlayıcım Geldi** <a:megafon:676472995199582256>")
+            }
+        }
+       
+});  
+
+//AÇILIN KODLAYICIM GLEDİ//
+
+////////////////// gold üye  //////////////////////////
+
+client.on("message", async message => {
+
+if( message.content === "sa" || message.content === "Sa" || message.content === "Selamın Aleyküm" || message.content === "selamın aleyküm" || message.content === "sea" || message.content === "Sea") {
+
+let gold = require("quick.db").fetch(`tios_gold${message.author.id}`)
+if (gold === "gold") {
+
+  const embed = new Discord.RichEmbed()
+  .setColor("GOLD")
+  .setDescription(" Hizaya Geçin Bu Bir **Gold** Üye ! ")
+  message.channel.send({embed})
+
+  } else {
+
+return;
+
+  }
+}
+})
+
+/////////////////////// Gold Üye /////////////////////////
