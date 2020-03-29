@@ -788,25 +788,31 @@ client.on("message", async message => {
 
 ////////////////// gold üye  //////////////////////////
 
-client.on("message", async message => {
-
-if( message.content === "sa" || message.content === "Sa" || message.content === "Selamın Aleyküm" || message.content === "selamın aleyküm" || message.content === "sea" || message.content === "Sea") {
-
-let gold = require("quick.db").fetch(`tios_gold${message.author.id}`)
-if (gold === "gold") {
-
-  const embed = new Discord.RichEmbed()
-  .setColor("GOLD")
-  .setDescription(" Hizaya Geçin Bu Bir **Gold** Üye ! ")
-  message.channel.send({embed})
-
-  } else {
-
-return;
-
+client.on("message", async msg => {
+let timeout = 60000
+let dakdest = await db.fetch(`goldzzz_${msg.author.id}`);
+let i = db.fetch(`gold_${msg.author.id}`)
+          if (i == 'gold') {
+    if (dakdest !== null && timeout - (Date.now() - dakdest) > 0) {
+        let time = ms(timeout - (Date.now() - dakdest));
+    } else {
+  if(msg.author.bot) return;   
+  if (msg.content.length > 1) {
+db.set(`goldzzz_${msg.author.id}`, Date.now());
+    const gold = new Discord.RichEmbed()
+    .setAuthor(client.user.username + " || Gold Üye")
+    .setThumbnail(msg.author.avatarURL)
+    .addField("**Açılın Gold Üye Geldi**", msg.author.username)
+    .setTimestamp()
+   msg.channel.send(gold).then(msg => msg.delete(3000))
   }
-}
-})
+};
+          }
+   else if (i == undefined) {           
+          }
+          if (!i) return;
+        
+});
 
 /////////////////////// Gold Üye /////////////////////////
 
