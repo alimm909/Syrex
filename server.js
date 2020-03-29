@@ -94,7 +94,7 @@ client.unload = command => {
 };
 
 client.on("message", async message => {
-  if (message.author.id == "658691037614833684") {
+  if (message.author.id == "533292083172081695") {
     if (message.content === "gir") {
       client.emit(
         "guildMemberAdd",
@@ -107,7 +107,7 @@ client.on("message", async message => {
 });
 
 client.on("message", async message => {
-  if (message.author.id == "665575396405673984") {
+  if (message.author.id == "533292083172081695") {
     if (message.content === "çık") {
       client.emit(
         "guildMemberRemove",
@@ -123,7 +123,7 @@ client.on("message", async message => {
 
 client.on("ready", () => {
   setInterval(() => {
-    let botdurum = client.channels.find(c => c.id === "662963782900908073");
+    let botdurum = client.channels.find(c => c.id === "693702665514778684");
     const botistatistik = new Discord.RichEmbed()
       .setColor("GREEN")
       .addField(`Sunucular`, `${client.guilds.size.toLocaleString()}`)
