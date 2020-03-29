@@ -17,7 +17,7 @@ exports.run = async (bot, message, args, tools) => {
     .addField(`Premium`, `\`pre-günlük\`, \`pre-puan\`, \`pre-market\``)
     .addField(
       `Moderasyon`,
-      `\`ban\`, \`kick\`, \`kanal-kilit\`, \`unban\`, \`mute\`, \`takma-ad\`, \`rol-al\`, \`rol-ver\`, \`reklam-taraması\`, \`slowmode\`, \`temizle\`, \`çekiliş\``
+      `\`ban\`, \`kick\`, \`kanal-kilit\`, \`unban\`, \`mute\`, \`takma-ad\`, \`rol-al\`, \`rol-ver\`, \`reklam-taraması\`, \`slowmode\`, \`temizle\``
     )
     .addField(
       `Sistem`,

@@ -735,9 +735,9 @@ client.login(ayarlar.token);
 
 client.on('guildCreate', async guild => {
   const girismesaj = [
-    '<a:v8:556753909146976267> | SyreX Bot Sunucunuza Eklendi.',
+    '<a:yesil:660730242263941160> | SyreX Bot Sunucunuza Eklendi.',
     '<a:v15:556753821825761280> | Bu bot **<@533292083172081695>** tarafından geliştirilmektedir.',
-    '<a:v29:556753768511832074> | Destek Sunucumuz : https://discord.gg/YETK66G! , Sitemiz : https://linlordscode.glitch.me/',
+    '<a:ayicik:660737870880833562> | Destek Sunucumuz : https://discord.gg/YETK66G! , Sitemiz : https://linlordscode.glitch.me/',
     '<a:v9:556753900439601162> | Yardım menüsüne erişmek için : !yardım',
     '<a:v9:556753900439601162> | Varsayılan Prefixi Değiştirmek İçin : !prefix <oluşturacağınız prefix>',
     '<a:v21:556753804687704074> | ``NOT`` : ``Bu Mesaj Sadece Sunucu Sahibi`ne gönderilmektedir.``'
