@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription("```Ne yazık ki bu komutu kullanmaya yetkin yok.```")
-      .setColor("#ff3600");
+      .setColor("BLACK");
 
     message.channel.send(embed);
     return;
@@ -16,13 +16,13 @@ module.exports.run = async (bot, message, args) => {
     return message.channel.send(
       new Discord.RichEmbed()
         .setDescription("Lütfen sunucudan yasaklanacak kişiyi etiketleyiniz!")
-        .setColor("#ff3600")
+        .setColor("BLACK")
         .setFooter(bot.user.username, bot.user.avatarURL)
     );
   }
 
   const embed = new Discord.RichEmbed()
-    .setColor("#ff3600")
+    .setColor("BLACK")
     .setDescription(`${u} Adlı şahsın yasaklanmasını onaylıyor musunuz?`)
     .setFooter(bot.user.username, bot.user.avatarURL);
   message.channel.send(embed).then(async function(sentEmbed) {

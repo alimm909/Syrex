@@ -12,7 +12,7 @@ exports.run = async (bot, message, args, tools) => {
     .addField(`Rütbeler`, `\`rütbe-ekle\`, \`rütbe-sil\`, \`rütbe-liste\``)
     .addField(
       `Bot`,
-      `\`bot-bilgi\`, \`yapımcılar\`, \`davet\`, \`yardım\`, \`üye-durum\`, \`ping\`, \`prefix\`, \`prefix-sıfırla\`, \`destek-sunucu\``
+      `\`bot-bilgi\`, \`yapımcılar\`, \`davet\`, \`yardım\`, \`say\`, \`ping\`, \`prefix\`, \`prefix-sıfırla\`, \`destek-sunucu\``
     )
     .addField(`Premium`, `\`pre-günlük\`, \`pre-puan\`, \`pre-market\``)
     .addField(

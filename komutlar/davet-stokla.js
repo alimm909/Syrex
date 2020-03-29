@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
   let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "!";
 
   const embed = new Discord.RichEmbed()
-    .setColor("#ff3600")
+    .setColor("BLACK")
     .setDescription(`Davetleriniz stoklandı!`)
   .setFooter(bot.user.username, bot.user.avatarURL)
   message.channel.send(embed);

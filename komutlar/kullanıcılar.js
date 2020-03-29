@@ -9,10 +9,10 @@ module.exports.run = async (client, message) => {
     .addField(`Toplam Kişi`, üyesayi, true)
   .addField(`Toplam Kullanıcı`, kullanıcılar, true)
   .addField(`Botlar`, botlar, true)
-  .addField(`Aktif Üyeler`, `${message.guild.members.filter(o => o.presence.status === 'online').size} <a:uwu:630044717106855996>`, true)
-  .addField(`Boşta Üyeler`, `${message.guild.members.filter(i => i.presence.status === 'idle').size} <a:uwu:630044786425987093>`, true)
-  .addField(`Rahatsız Modda Üyeler`, `${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size} <a:nou:630044752146071593>`, true)
-  .addField(`İnaktif Üyeler`, `${message.guild.members.filter(off => off.presence.status === 'offline').size} <a:niu:630044809859432449>`, true)
+  .addField(`Çevrimiçi Üyeler`, `${message.guild.members.filter(o => o.presence.status === 'online').size} `, true)
+  .addField(`Boşta Olan Üyeler`, `${message.guild.members.filter(i => i.presence.status === 'idle').size} `, true)
+  .addField(`R. Etme Üyeler`, `${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size} `, true)
+  .addField(`Çevrimdışı Üyeler`, `${message.guild.members.filter(off => off.presence.status === 'offline').size} `, true)
   
   
 .setFooter(client.user.username, client.user.avatarURL)
@@ -23,7 +23,7 @@ module.exports.run = async (client, message) => {
 module.exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ['say'],
   permLevel: 0,
   kategori: "sunucu"
 };

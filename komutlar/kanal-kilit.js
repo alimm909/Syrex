@@ -79,7 +79,7 @@ exports.run = async (bot, message, args) => {
 
               const embedyazı = new Discord.RichEmbed()
 
-                .setColor("BLACK")
+                .setColor("#ff3600")
                 .setDescription(`Başarıyla kanalın kilidi açıldı!`)
                 .setTimestamp()
               .setFooter(bot.user.username, bot.user.avatarURL)

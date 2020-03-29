@@ -22,7 +22,7 @@ exports.run = async (client, message, args) => {
   dbl.getBot(botcuk.id).then(async bot => {
     const embed = new Discord.RichEmbed()
       .setAuthor(`${bot.username}`, botcuk.avatarURL)
-      .setColor("GREEN")
+      .setColor("BLACK")
       .addField("BOT Id", bot.id, true)
       .addField("İsim", bot.username, true)
       .addField("Tag", bot.discriminator, true)

@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     const embed = new Discord.RichEmbed()
       .setDescription("```Ne yazık ki bu komutu kullanmaya yetkin yok.```")
     .setFooter(bot.user.username, bot.user.avatarURL)
-      .setColor("#ff3600");
+      .setColor("BLACK");
 
     message.channel.send(embed);
     return;
@@ -19,11 +19,11 @@ module.exports.run = async (bot, message, args) => {
       new Discord.RichEmbed()
         .setDescription("Lütfen bir kanal belirtiniz!")
       .setFooter(bot.user.username, bot.user.avatarURL)
-        .setColor("#ff3600")
+        .setColor("BLACK")
     );
   }
   const embed = new Discord.RichEmbed()
-    .setColor("#ff3600")
+    .setColor("BLACK")
   .setFooter(bot.user.username, bot.user.avatarURL)
     .setDescription(`Davet kanalı; ${kanal} olarak ayarlandı!`);
   message.channel.send(embed);
