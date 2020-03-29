@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message) => {
  
-  if (client.guilds.size < 20) return message.reply("Bot `20` tane sunucuda bulunmuyor!")
+  if (client.guilds.size < 20) return message.reply("Bot `20` tane sunucuda bulunmuyor :(")
   
 const top = client.guilds.sort((a,b)=>a.memberCount-b.memberCount).array().reverse()
 const embed = new Discord.RichEmbed()

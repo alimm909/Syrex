@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   let veri12 = await db.fetch(`roldavet1_${message.guild.id}`)
   if (veri2) {
     const embed = new Discord.RichEmbed()
-      .setDescription(`Zaten maksimum rütbe sınırına ulaşmışsınız!`)
+      .setDescription(`En Fazla "2" Tane Rütbe Ekleyebilirsiniz.`)
       .setColor("BLACK")
       .setFooter(client.user.username, client.user.avatarURL);
 

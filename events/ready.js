@@ -5,13 +5,13 @@ const ayarlar = require("../ayarlar.json");
 var prefix = ayarlar.prefix;
 
 module.exports = async client => {
-  var oyun = ["Davet Community®", "Versiyon v0.2", "Rol Koruma Sistemi!"];
+  var oyun = ["LinLord Bot | !canlıdestek", "Versiyon v0.1", "Rol Koruma Sistemi!", "Güncel Davet Sistemi!", "Rol Koruma Sistemi!", "!davet | !site | !destek"];
 
   setInterval(async () => {
     var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
 
-    client.user.setActivity(oyun[random], { type: "WATCHING" });
-  }, 12000);
+    client.user.setActivity(oyun[random], { type: "PLAYING" });
+  }, 10000);
   client.user.setStatus("online");
 
   /*client.user.setActivity("a!yardım | a!davet | a!prefix ☣", { type: "WATCHING" });*/
