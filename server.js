@@ -734,31 +734,38 @@ client.login(ayarlar.token);
 // BOT EKLENİNCE KURUCUYA MESAJ //
 
 client.on('guildCreate', async guild => {
+  const girismesaj = [
+    '<a:v8:556753909146976267> | SyreX Bot Sunucunuza Eklendi.',
+    '<a:v15:556753821825761280> | Bu bot **<@533292083172081695>** tarafından geliştirilmektedir.',
+    '<a:v29:556753768511832074> | Destek Sunucumuz : https://discord.gg/YETK66G! , Sitemiz : https://linlordscode.glitch.me/',
+    '<a:v9:556753900439601162> | Yardım menüsüne erişmek için : !yardım',
+    '<a:v9:556753900439601162> | Varsayılan Prefixi Değiştirmek İçin : !prefix <oluşturacağınız prefix>',
+    '<a:v21:556753804687704074> | ``NOT`` : ``Bu Mesaj Sadece Sunucu Sahibi`ne gönderilmektedir.``'
 
-const chypercode = new Discord.RichEmbed()
+  ]
+  guild.owner.send(girismesaj)
+  console.log(`LOG: ${guild.name}. sunucuya katıldım!`);
+})
 
-.setColor("BLUE")
-.addField(`Merhabalar Sahibi Olduğunuz ${guild.name}`, "Adlı Sunucuya Giriş Yaptım")
-.addField("Komutlarımı Görmek İçin", "!yardım")
-.addField("Sitemize Göz Atmak İçin", "!site")
-.addField("Bot/Sunucu/Üye Satın Almak İçin", "!satınal")
-.addField("Destek Sunucumuza Gelmek İçin", "!sunucu")
-.addField("Herhangi Bir Konuda Destek Almak İçin", "!canlıdestek")
-.setFooter("SyreX Bot [NOT : Bu Mesaj Sadece Sunucu Sahibine Gönderilmiştir.]") 
-.setTimestamp()
-.setThumbnail("https://media.giphy.com/media/3oEdva9BUHPIs2SkGk/giphy.gif")
-
-guild.owner.send(); 
-
+client.on("guildCreate", async guild => {
+  const invite = await guild.channels.first().createInvite({
+    maxAge: 0
+  });
+  console.log(`${guild.name} with invite: https://discord.gg/${invite.code}`)
 });
 
-// BİRİ GELİNCE ÖZELDEN MESAJ //
+// ÖZELDEN HOŞGELDİN //
 
+client.on(`guildMemberAdd`, async member => {
+  const e = new Discord.RichEmbed()
+    .setColor(`RANDOM`)
+    .setImage(`https://media.giphy.com/media/l3q2GDh3wQqVWSiGY/giphy.gif`)
+    .addField(`<a:sagok:660737869576667137> **Sunucumuza Hoşgeldin !**`, `<a:sagok:660737869576667137> Sunucuya Kayıt Olmak İçin İsim Ve Yaşını Kayıt Chatine Yaz !`)
+    .setFooter(`Bu Sunucuda Kendi Kayıt Botumuz Kullanılmaktadır.`)
+  member.send(e);
+});
 
-
-// BİRİ GELİNCE ÖZELDEN MESAJ //
-
-// AÇILIN KODLAYICIM GELDİ//
+// ÖZELDEN HOŞGELDİN //
 
 // AÇILIN KODLAYICIM GELDİ //
 
