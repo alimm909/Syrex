@@ -14,8 +14,8 @@ module.exports.run = async (bot, message) => {
     .duration(bot.uptime)
     .format("D [gün], H [saat], m [dakika], s [saniye]");
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
-    .addField(`Versiyon`, `0.2`, true)
+    .setColor("#ff3600")
+    .addField(`Versiyon`, `0.1`, true)
     .addField(`Aktiflik Süresi`, duration, true)
     .addField(`Sunucular`, bot.guilds.size.toLocaleString(), true)
     .addField(`Kullanıcılar`, bot.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString(), true)
@@ -26,9 +26,8 @@ module.exports.run = async (bot, message) => {
       true
     )
     .addField(`Bu Sunucu Premium Mu?`, pre, false)
-    .addField(`Destek Sunucusu`, `http://bit.ly/davetyöneticisidestek`, false)
-    .addField(`Botu Ekleyin`, `http://bit.ly/davetyöneticisiekle`, false)
-  .addField(`Bota Oy Verin`, `http://bit.ly/davetyöneticisioy`, false)
+    .addField(`Destek Sunucusu`, `https://discord.gg/YETK66G`, false)
+    .addField(`Sitemize Göz Atın`, `http://linlordscode.glitch.me`, false)
     .setFooter(bot.user.username, bot.user.avatarURL);
   message.channel.send(embed);
 };

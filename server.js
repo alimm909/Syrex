@@ -544,7 +544,7 @@ client.on("guildMemberAdd", async member => {
     const embed = new Discord.RichEmbed()
       .setColor("#ff3600")
       .setDescription(
-        `<a:tik:627830420070727690> - :loudspeaker: **@${
+        `:loudspeaker: **@${
           member.user.tag
         }** adlı şahsa aramıza katıldı! ${rol} kişi olmamıza ${rol -
           member.guild.memberCount} kişi kaldı! :inbox_tray:`
@@ -582,7 +582,7 @@ client.on("guildMemberAdd", async member => {
     const embed = new Discord.RichEmbed()
       .setColor("#ff3600")
       .setDescription(
-        `<a:tik:627830420070727690> - :loudspeaker: **@${member.user.tag}** adlı şahsa tag verildi!`
+        `:loudspeaker: **@${member.user.tag}** adlı şahsa tag verildi!`
       )
       .setFooter(client.user.username, client.user.avatarURL);
     client.channels.get(kanal).send(embed);
@@ -595,7 +595,7 @@ client.on("guildMemberAdd", async member => {
     const embed = new Discord.RichEmbed()
       .setColor("#ff3600")
       .setDescription(
-        `<a:tik:627830420070727690> - :loudspeaker: **@${member.user.tag}** adlı şahsa tag verildi!`
+        `:loudspeaker: **@${member.user.tag}** adlı şahsa tag verildi!`
       )
       .setFooter(client.user.username, client.user.avatarURL);
     client.channels.get(kanal).send(embed);
@@ -661,7 +661,7 @@ client.on("guildMemberRemove", async member => {
     const embed = new Discord.RichEmbed()
       .setColor("#ff3600")
       .setDescription(
-        `<a:tik:627830420070727690> - :loudspeaker: **@${
+        `- :loudspeaker: **@${
           member.user.tag
         }** adlı şahsa aramızdan ayrıldı! ${rol} kişi olmamıza ${rol -
           member.guild.memberCount} kişi kaldı! :inbox_tray:`
@@ -693,7 +693,7 @@ client.on("guildCreate", async guild => {
     .setDescription(
       `Sunucu Adı: ${guild.name}\nSunucu Id: ${guild.id}\nSunucu Sahibi: ${guild.owner}\nSunucudaki Kişi Sayısı: ${guild.memberCount}\nSunucu Oluşturulma Zamanı: ${guild.createdAt}\nDoğrulama Seviyesi: ${guild.verificationLevel}`
     );
-  client.channels.get(`662963655075299360`).send(embed);
+  client.channels.get(`693702619264319519`).send(embed);
 });
 client.on("guildDelete", async guild => {
   const embed = new Discord.RichEmbed()
@@ -702,7 +702,7 @@ client.on("guildDelete", async guild => {
     .setDescription(
       `Sunucu Adı: ${guild.name}\nSunucu Id: ${guild.id}\nSunucu Sahibi: ${guild.owner}\nSunucudaki Kişi Sayısı: ${guild.memberCount}\nSunucu Oluşturulma Zamanı: ${guild.createdAt}\nDoğrulama Seviyesi: ${guild.verificationLevel}`
     );
-  client.channels.get(`662963655075299360`).send(embed);
+  client.channels.get(`693702619264319519`).send(embed);
 });
 
 client.elevation = message => {
