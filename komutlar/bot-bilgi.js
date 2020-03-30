@@ -35,7 +35,7 @@ module.exports.run = async (bot, message) => {
 module.exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ['i', 'istatistik'],
   permLevel: 0,
   kategori: "sunucu"
 };
