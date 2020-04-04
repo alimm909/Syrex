@@ -733,37 +733,8 @@ client.login(ayarlar.token);
 
 // BOT EKLENİNCE KURUCUYA MESAJ //
 
-client.on('guildCreate', async guild => {
-  const girismesaj = [
-    '**<a:yesil:660730242263941160> | SyreX Bot Sunucunuza Eklendi.',
-    ':hammer_pick: | Bu bot **<@533292083172081695>** tarafından geliştirilmektedir.',
-    '<a:ayicik:660737870880833562> | Destek Sunucumuz : https://discord.gg/YETK66G! , Sitemiz : https://linlordscode.glitch.me/',
-    ':newspaper: | Yardım menüsüne erişmek için : !yardım',
-    ':gear: | Varsayılan Prefixi Değiştirmek İçin : !prefix <oluşturacağınız prefix>',
-    ':briefcase:| ``NOT`` : ``Bu Mesaj Sadece Sunucu Sahibi`ne gönderilmektedir.``**'
-
-  ]
-  guild.owner.send(girismesaj)
-  console.log(`LOG: ${guild.name}. sunucuya katıldım!`);
-})
-
-client.on("guildCreate", async guild => {
-  const invite = await guild.channels.first().createInvite({
-    maxAge: 0
-  });
-  console.log(`${guild.name} with invite: https://discord.gg/${invite.code}`)
-});
 
 // ÖZELDEN HOŞGELDİN //
-
-client.on(`guildMemberAdd`, async member => {
-  const e = new Discord.RichEmbed()
-    .setColor(`BLUE`)
-    .setImage(`https://media.giphy.com/media/xUPGGDNsLvqsBOhuU0/giphy.gif`)
-    .addField(`<a:sagok:660737869576667137> **Sunucuya Hoşgeldin !**`, `<a:sagok:660737869576667137> Bu Sunucu "SyreX Bot" Kullanıyor !`)
-    .setFooter(`Botu Davet Etmek İçin : !davet | Sitemiz İçin : !site`)
-  member.send(e);
-});
 
 // ÖZELDEN HOŞGELDİN //
 
