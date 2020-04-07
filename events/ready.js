@@ -5,7 +5,7 @@ const ayarlar = require("../ayarlar.json");
 var prefix = ayarlar.prefix;
 
 module.exports = async client => {
-  var oyun = ["SyreX Bakım Modu Aktif !"];
+  var oyun = ["Syrex | !davet","Syrex | !yenilikler","SyreX | !kayıtsistemi","SyreX | !davetsistemi","youtube.com/linlords"];
 
   setInterval(async () => {
     var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
