@@ -28,7 +28,7 @@ if(message.author.bot) return
   let bakım = await db.fetch('bakım');
   if(message.author.id !== ayarlar.sahip){
   if(bakım){
-  return message.channel.send(`**<a:yukleniyor:660730237746806794> Sizlere En İyi Hizmeti Verebilmek İçin Bakımdayız.\n❓ Bakım Sebebi: \`${bakım}\`\n<a:onaylandi:660731474567495690> Lütfen Daha Sonra Tekrar Deneyin.**`)
+  return message.channel.send(`**<a:bakim:697123903981748295> Sizlere En İyi Hizmeti Verebilmek İçin Bakımdayız.\n❓ Bakım Sebebi: \`${bakım}\`\n<a:onaylandi:660731474567495690> Lütfen Daha Sonra Tekrar Deneyin.**`)
      }
     }
     if (perms < cmd.conf.permLevel) return;
