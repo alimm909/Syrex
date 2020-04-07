@@ -9,10 +9,10 @@ exports.run = (client, message, args) => {
         .setAuthor(`${client.user.username} `, client.user.avatarURL)
         .setColor('0x36393E')
         .setTitle(`${client.user.username} - Satın Alma Yardım Menüsü`)
-        .setDescription(` • | • Merhabalar, Sizlere 5 Senelik Tecrübe Sunuyoruz !\n\n  • | • Sizde Discord Botu / Discord Sunucusu / Discord Üye Satın Almak İstiyorsanız **!canlıdestek** yazarak veya destek sunucumuza gelerek bizimle iletişim kurabilirsiniz.\n`)  
+        .setDescription(` **• \`!yardım\` Menüsü Düzenlendi,Tüm Komutların Açıklaması Eklendi.\n• Ayarlanabilir Kayıt Sistemi Eklendi : \`!kayıtsistemi\`\n• Bazı Komut Bugları Düzeltildi.\n• Botun Gecikme Süresi Azaltıldı.\n\n• SyreX v0.2 Sürümüyle Karşınızda !**`)  
         .setThumbnail(client.user.avatarURL)
         .addField(`» Linkler`, `[Bot Davet Linki](https://discordapp.com/oauth2/authorize?client_id=677145750043361320&permissions=8&scope=bot) **|** [Destek Sunucusu](https://discord.gg/YETK66G) **|** [Web Sitemiz](https://linlordscode.glitch.me/)`)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz
-        .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
+        .setFooter(`SyreX | Bot Sürümü : v0.2 | Varsayılan Prefix : !`, client.user.avatarURL)
     return message.channel.sendEmbed(embed);
   
   

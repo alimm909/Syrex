@@ -796,3 +796,14 @@ client.on("message", async message => {
   if(message.guild) return;
   client.channels.get('693702713812320256').send(new Discord.RichEmbed().setAuthor("Yeni Bir DM", client.user.avatarURL).setFooter(message.author.tag, message.author.avatarURL).setDescription(`**Gönderenin ID:** ${message.author.id}`).setTimestamp().addField("Mesaj", message.content).setColor("RANDOM"))
 })
+
+//Kayıtsız Rol Ayarlama
+
+client.on('guildMemberAdd', async member => {
+ let kayıtszrol = await db.fetch(`kayıtsızrol_${member.guild.id}`)
+ if (!kayıtszrol) return;
+  member.addRole(member.guild.roles.get(kayıtszrol))
+
+});
+
+//Kayıtsız Rol Ayarlama Son
