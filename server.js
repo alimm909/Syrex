@@ -227,9 +227,8 @@ client.on("message", async message => {
     if (i === "acik") {
       const embed = new Discord.RichEmbed()
         .setColor("BLUE")
-        .setTitle("Sa-As sistemi!")
         .setDescription(
-          "**Aleyküm Selam, Hoşgeldin! ^-^**"
+          "**Aleyküm Selam, Hoşgeldin Dostum! ^-^**"
         )
         .setFooter(client.user.username, client.user.avatarURL);
 
