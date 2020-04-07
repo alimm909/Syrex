@@ -11,10 +11,10 @@ exports.run = (bot, message, args) => {
 message.channel.send(embed)  
   return }
 
-    const members = message.guild.members.filter(member => member.user.presence.game && /(www.|.xyz|discord|http|.com|.net|.org|invite|İnstagram|Facebook|watch|Youtube|youtube|facebook|instagram)/g.test(member.user.presence.game.name));
-    const memberss = message.guild.members.filter(member => member.user.username && /(discord|http|.com|.net|.org|invite|İnstagram|Facebook|watch|Youtube|youtube|facebook|instagram)/g.test(member.user.username));
+    const members = message.guild.members.filter(member => member.user.presence.game && /(FREE|Free|free|DM|.gg|www.|.xyz|discord|http|.com|.net|.org|invite|İnstagram|Facebook|watch|Youtube|youtube|facebook|instagram)/g.test(member.user.presence.game.name));
+    const memberss = message.guild.members.filter(member => member.user.username && /(FREE|Free|free|.gg|DM|discord|http|.com|.net|.org|invite|İnstagram|Facebook|watch|Youtube|youtube|facebook|instagram)/g.test(member.user.username));
     const embed = new Discord.RichEmbed()
-        .addField('Oynuyorunda reklam olanlar', members.map(member => `${member} = ${member.user.presence.game.name}`).join("\n") || "Yok!")
+        .addField('Oynuyor Mesajında reklam olanlar', members.map(member => `${member} = ${member.user.presence.game.name}`).join("\n") || "Yok!")
         .addField('Kullanıcı adında reklam olanlar', memberss.map(member => `${member} = ${member.user.username}`).join("\n") || "Yok!")
         .setColor("BLUE")
              .setFooter(bot.user.username, bot.user.avatarURL)

@@ -230,7 +230,6 @@ client.on("message", async message => {
         .setDescription(
           "**Aleyküm Selam, Hoşgeldin Dostum! ^-^**"
         )
-        .setFooter(client.user.username, client.user.avatarURL);
 
       message.channel.send(embed).then(msg => msg.delete(5000));
     }

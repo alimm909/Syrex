@@ -90,7 +90,7 @@ exports.run = async (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["yavaş-mod"],
+  aliases: ["yavaş-mod","yavasmod","yavas"],
   permLevel: 1,
   kategori: "moderasyon"
 };
