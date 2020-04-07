@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
   let prefix = args.slice(0).join(" ");
   if (!prefix) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`Lütfen bir prefix belirtiniz!`)
       .setFooter(client.user.username, client.user.avatarURL);
 
@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
     return;
   }
   const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setDescription(`Prefix; \`${prefix}\` olarak ayarlandı!`)
       .setFooter(client.user.username, client.user.avatarURL);
 

@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
         .setAuthor(`${client.user.username} `, client.user.avatarURL)
         .setColor('BLUE')
         .setTitle(`${client.user.username} - Yardım Menüsü`)
-        .setDescription(` • | **!davetsistemi** : Davet Sistemi Hakkında Bütün Bilgileri Görürsünüz.\n`)  
+        .setDescription(` • | **${ayarlar.prefix}davetsistemi** : Davet Sistemi Hakkında Bütün Bilgileri Listelersiniz.\n • | **!moderasyon** : Yetkililerin Kullanabileceği Komutları Listelersiniz.\n • | **${ayarlar.prefix}sistem** : Sistem Komutarını Listelersiniz.\n • | **${ayarlar.prefix}bot** : Bot Hakkında`)  
         .setThumbnail(client.user.avatarURL)
         .addField(`» Linkler`, `[Bot Davet Linki](https://discordapp.com/oauth2/authorize?client_id=677145750043361320&permissions=8&scope=bot) **|** [Destek Sunucusu](https://discord.gg/YETK66G) **|** [Web Sitemiz](https://linlordscode.glitch.me/)`)//websiteniz yoksa  **|** [Web Sitesi]() yeri silebilirsiniz
         .setFooter(`${message.author.username} Tarafından İstendi.`, message.author.avatarURL)
