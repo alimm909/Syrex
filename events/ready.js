@@ -5,7 +5,7 @@ const ayarlar = require("../ayarlar.json");
 var prefix = ayarlar.prefix;
 
 module.exports = async client => {
-  var oyun = ["SyreX Bot | !canlıdestek", "Versiyon v0.1", "Rol Koruma Sistemi!", "Güncel Davet Sistemi!", "Rol Koruma Sistemi!", "!davet | !site | !destek"];
+  var oyun = ["SyreX Bakım Modu Aktif !"];
 
   setInterval(async () => {
     var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
