@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK");
+      .setColor("BLUE");
 
     message.channel.send(embed);
     return;
@@ -18,12 +18,12 @@ module.exports.run = async (bot, message, args) => {
         .setDescription(
           `Lütfen bir isim belirtiniz!\n\nDeğişkenler:\n-uye- = Üyenin adını yazar.\n-tag- = Tagı ekler.`
         )
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
 
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`Ototag ismi; ${msj} olarak ayarlandı!`);
   message.channel.send(embed);
 

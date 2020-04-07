@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK");
+      .setColor("BLUE");
 
     message.channel.send(embed);
     return;
@@ -15,12 +15,12 @@ let role = await db.fetch(`ototag_${message.guild.id}`);
     return message.channel.send(
       new Discord.RichEmbed()
         .setDescription(`Ototag zaten ayarlanmamış!`)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
 
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`Ototag başarıyla sıfırlandı!`);
   message.channel.send(embed);
 

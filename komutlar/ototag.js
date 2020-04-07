@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK");
+      .setColor("BLUE");
 
     message.channel.send(embed);
     return;
@@ -17,18 +17,18 @@ module.exports.run = async (bot, message, args) => {
     return message.channel.send(
       new Discord.RichEmbed()
         .setDescription(`Lütfen bir tag belirtiniz!`)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
   if (!kanal) {
     return message.channel.send(
       new Discord.RichEmbed()
         .setDescription(`Lütfen bir kanal belirtiniz!`)
-        .setColor("BLACK")
+        .setColor("BLUE")
     );
   }
   const embed = new Discord.RichEmbed()
-    .setColor("BLACK")
+    .setColor("BLUE")
     .setDescription(`Ototag kanalı; ${kanal}\nTagı; ${role} olarak ayarlandı!`);
   message.channel.send(embed);
 
