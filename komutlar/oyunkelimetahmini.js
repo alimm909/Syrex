@@ -12,7 +12,7 @@ db.set(`Domates`,`Kırmızı bir sebze.`)
 db.set(`Otel`,`Tatillerde vb. durumlarda para karşılığı kalıncak yer.`)
 db.set(`Söğüt`,`Asprinin ham maddesi.`)
 db.set(`Veteriner`,`Hayvan doktoru.`)
-db.set(`Airafe`,`Bu oyunu oynadığınız botun ismi.`)
+db.set(`SyreX`,`Bu oyunu oynadığınız botun ismi.`)
 db.set(`Rythm`,`En çok sunucuya sahip müzik botu.`)
 db.set(`Magnum`,`2019 Yılında Maserati verecek olan dondurma markası.`)
 db.set(`Lüksemburg`,`Avrupa'da adı ile başkenti aynı olan bir ülke`)
@@ -20,7 +20,7 @@ db.set(`Deve`,`Çöl yaşamına dayanıklı, sarı esmer renkte, yüksek boylu, 
 //kelime haznesi (açıklamalar)
 
 //Amil <3 ///////////////////
-      var kelimeler = ['Klostrofobi','Türkçe','Domates','Otel','Söğüt','Veteriner','Airafe','Rythm','Magnum','Lüksemburg','Deve'];
+      var kelimeler = ['Klostrofobi','Türkçe','Domates','Otel','Söğüt','Veteriner','SyreX','Rythm','Magnum','Lüksemburg','Deve'];
       var kelime = kelimeler[Math.floor(Math.random() * kelimeler.length)]
       var açıklama = await db.fetch(`${kelime}`) 
       var ekpoint = Math.floor((Math.random() * 10) + 1);
