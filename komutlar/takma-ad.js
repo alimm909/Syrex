@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     return message.channel.send(
       new Discord.RichEmbed()
         .setDescription(
-          `Lütfen bir kullanıcı giriniz!\nÖrnek: ${prefix}ad <@Kullanıcı> <YeniAd>`
+          `Lütfen bir kullanıcı giriniz!\nÖrnek: ${prefix}isim <@Kullanıcı> <Yeniİsim>`
         )
         .setColor("BLUE")
       .setFooter(bot.user.username, bot.user.avatarURL)
@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["takma-ad"],
+  aliases: ["takma-ad","isim"],
   permLevel: 1,
   kategori: 'moderasyon'
 };

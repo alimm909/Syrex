@@ -3,15 +3,14 @@ const db = require('quick.db')
 const ayarlar = require('../ayarlar.json')
 const client = new Discord.Client();
 exports.run = async (client, message, args) => {
-    const krm = client.emojis.get("691623355647918082")
-    const dk = client.emojis.get("691622612358660139")
+    const krm = client.emojis.get("703842141620666409")
+    const dk = client.emojis.get("703842141113417808")
   
   let GoldPlayer = args[0]
   if (!GoldPlayer) return message.channel.send(krm+ " Bir ID Girmelisin")
- message.react('683327648436453517')
   db.set(`Gold_${GoldPlayer}`, 'Gold')
   message.channel.send(` **\`\`${GoldPlayer}\`\`** ID'sine Sahip <@${GoldPlayer}> Artık Gold Üye!`)
- message.react('683327648436453517')
+ message.react('703842141113417808')
 }
 exports.conf = {
   enabled: true,

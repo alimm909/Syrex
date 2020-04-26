@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const botadi = "Syrex"
+const botadi = "SyreX"
 const ayarlar = require('../ayarlar.json');
 
 var prefix = ayarlar.prefix;

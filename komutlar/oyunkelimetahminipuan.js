@@ -16,7 +16,7 @@ const balance = await db.fetch(`ktbalance_${message.author.id}_d0ru`)
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [''],
+  aliases: ['ktpuan'],
   permLevel: 0,
 };
 

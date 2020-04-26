@@ -6,14 +6,14 @@ exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("BAN_MEMBERS")) {
     const embed = new Discord.RichEmbed()
       .setDescription(`Ne yazık ki bu komutu kullanmaya yetkin yok.`)
-      .setColor("BLACK");
+      .setColor("BLUE");
 
     message.channel.send(embed);
     return;
   }
   if (!args[0]) {
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setTitle("Reklam-Engel sistemi!")
       .setDescription(
         `Hatalı kullanım! örnek: ${prefix}reklam-engel aç && kapat`
@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
   if (args[0] == "aç") {
     if (kufur) {
       const embed = new Discord.RichEmbed()
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setTitle("Reklam-Engel sistemi!")
         .setDescription("**Görünüşe göre reklam filtresi zaten aktif!**");
 
@@ -35,7 +35,7 @@ exports.run = async (client, message, args) => {
     } else {
       db.set(`kufur_${message.guild.id}`, "Açık");
       const embed = new Discord.RichEmbed()
-        .setColor("BLACK")
+        .setColor("BLUE")
         .setTitle("Reklam-Engel sistemi!")
         .setDescription("Reklam filtresi başarıyla açıldı!");
 
@@ -44,7 +44,7 @@ exports.run = async (client, message, args) => {
   } else if (args[0] == "kapat") {
     db.delete(`kufur_${message.guild.id}`);
     const embed = new Discord.RichEmbed()
-      .setColor("BLACK")
+      .setColor("BLUE")
       .setTitle("Reklam-Engel sistemi!")
       .setDescription("Reklam filtresi başarıyla kapandı!");
 
