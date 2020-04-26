@@ -125,7 +125,7 @@ client.on("ready", () => {
   setInterval(() => {
     let botdurum = client.channels.find(c => c.id === "703145913001967617");
     const botistatistik = new Discord.RichEmbed()
-      .setColor("GREEN")
+      .setColor("BLUE")
       .addField(`Sunucular`, `${client.guilds.size.toLocaleString()}`)
       .addField(
         `Kullanıcılar`,
