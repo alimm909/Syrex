@@ -227,7 +227,7 @@ client.on("message", async message => {
       const embed = new Discord.RichEmbed()
         .setColor("BLUE")
         .setDescription(
-          "<a:mrb:692365557839691809>**Aleyküm Selam, Hoşgeldin Dostum! ^-^**"
+          `:wave: **Aleyküm Selam, Hoşgeldin Dostum! ^-^**`
         )
 
       message.channel.send(embed).then(msg => msg.delete(5000));
@@ -241,7 +241,7 @@ client.on("guildMemberAdd", async member => {
       const msj = new Discord.RichEmbed()
         .setColor("BLUE")
         .setDescription(
-          `<@${member.user.id}> sunucuya hoşgeldin!\nBu sunucu **<@${client.user.id}>** kullanıyor!\nKomutlarımı görmek için: !yardım\nEğer beni eklemek istersen: [[Tıkla!]](https://discordapp.com/api/oauth2/authorize?client_id=702922751962382449&permissions=8&scope=bot)`
+          `<@${member.user.id}> sunucuya hoşgeldin!\nKuralları Okumayı Unutma !\nKomutlarımı görmek için: !yardım\nEğer beni eklemek istersen: [[Tıkla!]](https://discordapp.com/api/oauth2/authorize?client_id=702922751962382449&permissions=8&scope=bot)`
         )
         .setFooter(client.user.username, client.user.avatarURL);
 
@@ -686,20 +686,20 @@ client.on("guildMemberRemove", async member => {
 client.on("guildCreate", async guild => {
   const embed = new Discord.RichEmbed()
     .setColor(`GREEN`)
-    .setTitle(`EKLENDİM!`)
+    .setTitle(`YENİ BİR SUNUCUYA DAHA EKLENDİM!`)
     .setDescription(
       `Sunucu Adı: ${guild.name}\nSunucu Id: ${guild.id}\nSunucu Sahibi: ${guild.owner}\nSunucudaki Kişi Sayısı: ${guild.memberCount}\nSunucu Oluşturulma Zamanı: ${guild.createdAt}\nDoğrulama Seviyesi: ${guild.verificationLevel}`
     );
-  client.channels.get(`693702619264319519`).send(embed);
+  client.channels.get(`703146682367475732`).send(embed);
 });
 client.on("guildDelete", async guild => {
   const embed = new Discord.RichEmbed()
     .setColor(`RED`)
-    .setTitle(`ATILDIM!`)
+    .setTitle(`BİR SUNUCUDAN ATILDIM!`)
     .setDescription(
       `Sunucu Adı: ${guild.name}\nSunucu Id: ${guild.id}\nSunucu Sahibi: ${guild.owner}\nSunucudaki Kişi Sayısı: ${guild.memberCount}\nSunucu Oluşturulma Zamanı: ${guild.createdAt}\nDoğrulama Seviyesi: ${guild.verificationLevel}`
     );
-  client.channels.get(`693702619264319519`).send(embed);
+  client.channels.get(`703146682367475732`).send(embed);
 });
 
 client.elevation = message => {
@@ -746,7 +746,7 @@ client.on("message", async message => {
     } else {
           if(message.author.id === ayarlar.sahip){
            db.set(`sahiponay_${message.author.id}_${message.guild.id}`, Date.now())
-            message.channel.send("<a:megafon:676472995199582256> **Hizaya Geçin, Kodlayıcım Geldi** <a:megafon:676472995199582256>")
+            message.channel.send("<a:king:703842046300913704> **Hizaya Geçin, Bu Benim Kodlayıcım** <a:king:703842046300913704>").then(msg => msg.delete (15000))
             }
         }
        
@@ -757,8 +757,8 @@ client.on("message", async message => {
 ////////////////// gold üye  //////////////////////////
 
 client.on("message", async message => {
-  let Gold = client.emojis.get("683327833375768616");
-  let TimeOut = 100000;
+  let Gold = client.emojis.get("703842046300913704");
+  let TimeOut = 1800000;
   let LastSee = await db.fetch(`GoldS_${message.author.id}`);
   let R = await db.fetch(`Gold_${message.author.id}`);
   if (R == "Gold") {
@@ -771,14 +771,14 @@ client.on("message", async message => {
         const RevengeNYKS = new Discord.RichEmbed()
           .setAuthor(message.author.tag, message.author.avatarURL)
           .setDescription(
-              " Bir Gold Üye Belirdi Açın Yolu! <@" +
+              " Bir Premium Üye Geldi,Hoşgeldin <@" +
               message.author.id +
               ">"
           )
           .setColor("RANDOM");
         message.channel
           .send(RevengeNYKS)
-          .then(message => message.delete(15000));
+          .then(message => message.delete(12000));
       }
     }
   } else if (R == undefined) {
@@ -793,7 +793,7 @@ client.on("message", async message => {
 client.on("message", async message => {
   if(message.author.id === client.user.id) return;
   if(message.guild) return;
-  client.channels.get('693702713812320256').send(new Discord.RichEmbed().setAuthor("Yeni Bir DM", client.user.avatarURL).setFooter(message.author.tag, message.author.avatarURL).setDescription(`**Gönderenin ID:** ${message.author.id}`).setTimestamp().addField("Mesaj", message.content).setColor("RANDOM"))
+  client.channels.get('703146826601201665').send(new Discord.RichEmbed().setAuthor("Yeni Bir DM", client.user.avatarURL).setFooter(message.author.tag, message.author.avatarURL).setDescription(`**Gönderenin ID:** ${message.author.id}`).setTimestamp().addField("Mesaj", message.content).setColor("RANDOM"))
 })
 
 //Kayıtsız Rol Ayarlama
