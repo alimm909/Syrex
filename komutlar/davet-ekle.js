@@ -18,7 +18,7 @@ let m = args.slice(1).join(" ")
     return message.channel.send(
       new Discord.RichEmbed()
       .setFooter(bot.user.username, bot.user.avatarURL)
-        .setDescription("Lütfen davet eklenecek kişiyi etiketleyiniz!")
+        .setDescription("<a:red:703842141620666409> Lütfen davet eklenecek kişiyi etiketleyiniz!")
         .setColor("BLUE")
     );
   }

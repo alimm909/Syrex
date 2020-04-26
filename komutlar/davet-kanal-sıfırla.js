@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
   let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "!";
   if (!message.member.hasPermission("KICK_MEMBERS")) {
     const embed = new Discord.RichEmbed()
-      .setDescription("```Ne yazık ki bu komutu kullanmaya yetkin yok.```")
+      .setDescription("```Ne yazık ki bu komutu kullanmaya yetkin yok.```").then(msg => msg.delete (7000))
     .setFooter(bot.user.username, bot.user.avatarURL)
       .setColor("BLUE");
 

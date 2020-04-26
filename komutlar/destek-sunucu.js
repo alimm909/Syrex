@@ -4,7 +4,7 @@ module.exports.run = async (client, message) => {
   
   const embed = new Discord.RichEmbed()
     .setColor("BLUE")
-    .addField(`Destek Sunucumuza Katılın!`, `[Tıkla](https://discord.gg/YETK66G)`)
+    .addField(`Destek Sunucumuza Katılın!`, `[Tıkla](https://discord.gg/e8P8Z5h)`)
 .setFooter(client.user.username, client.user.avatarURL)
 
   message.channel.send(embed);

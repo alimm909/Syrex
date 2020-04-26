@@ -6,7 +6,7 @@ const client = new Discord.Client();
 exports.run = async (client, message, args) => {
 
   const Hayir = client.emojis.get("669124699665727488");
-  const Evet = client.emojis.get("683327664932782146");
+  const Evet = client.emojis.get("703842141113417808");
   message.react("683327648436453517");
   let GoldPlayer = args[0];
   if (!GoldPlayer) return message.channel.send(Hayir + " Bir ID Girmelisin");
