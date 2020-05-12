@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+ımconst Discord = require('discord.js');
 const client = new Discord.Client();
 
 exports.run = (client, message, args) => {
