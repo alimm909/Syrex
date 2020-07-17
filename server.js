@@ -330,7 +330,7 @@ client.on("message", async message => {
           });
           let uyari = new Discord.RichEmbed()
             .setColor("BLUE")
-            .setTitle("SyreX Reklam-Engel!")
+            .setTitle("Retro Reklam-Engel!")
             .setDescription(
               `<@${message.author.id}> üç kere reklam yaptığı için sunucudan atıldı!`
             )
@@ -341,12 +341,12 @@ client.on("message", async message => {
         if (uyarisayisi === 3) {
           message.delete();
           await kullanici.ban({
-            reason: `SyreX Reklam-Engel sistemi!`
+            reason: `Retro Reklam-Engel sistemi!`
           });
           db.delete(`reklamuyari_${message.author.id}`);
           let uyari = new Discord.RichEmbed()
             .setColor("BLUE")
-            .setTitle("SyreX Reklam kick sistemi")
+            .setTitle("Retro Reklam kick sistemi")
             .setDescription(
               `<@${message.author.id}> atıldıktan sonra tekrar reklam yaptığı için sunucudan yasaklandı!`
             )
